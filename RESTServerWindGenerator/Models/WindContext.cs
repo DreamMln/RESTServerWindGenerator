@@ -13,5 +13,10 @@ namespace RESTServerWindGenerator.Models
 
         //We only have a single table with Items which is represented by this DbSet
         public DbSet<Wind> Wind { get; set; }
+
+        public WindContext()
+        {
+            //tom con
+        }
     }
 }

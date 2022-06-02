@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using RESTServerWindGenerator.Models;
 
 namespace RESTServerWindGenerator
 {
@@ -38,6 +40,9 @@ namespace RESTServerWindGenerator
                 builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader()));
+
+            //DBContext - connectionstring!!!!
+            services.AddDbContext<WindContext>(opt => opt.UseSqlServer(Models.Secret.ConnctionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

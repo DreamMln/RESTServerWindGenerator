@@ -19,7 +19,7 @@ namespace RESTServerWindGenerator.Controllers
         //A object of the IWindGeneratorsManager interface
         //Removed the initialization here, as it needs
         //the context from the Constructor
-        private IWindGeneratorsManager _manager;
+        private readonly IWindGeneratorsManager _manager;
 
         //Added this constructor to be able to use the WindContext in the Manager
         public WindGeneratorsController(WindContext context)
