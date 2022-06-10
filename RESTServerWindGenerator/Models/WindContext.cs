@@ -11,7 +11,7 @@ namespace RESTServerWindGenerator.Models
         //The constructor just calls the constructor in the DbContext class
         public WindContext(DbContextOptions<WindContext> options) : base(options) { }
 
-        //We only have a single table with Items which is represented by this DbSet
+        //We only have a single table with Wind which is represented by this DbSet
         public DbSet<Wind> Wind { get; set; }
 
         public WindContext()
